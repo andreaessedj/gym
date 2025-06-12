@@ -718,7 +718,7 @@ useEffect(() => {
 								onClick={() => setShowSkipModal(false)}
 								aria-label="Chiudi"
 							>×</button>
-							<h2 className="text-2xl font-bold text-pink-700 mb-2">Vuoi saltare questo giorno?</h2>
+							<h2 className="text-2xl font-bold text-pink-700 mb-2 text-center">Vuoi saltare questo giorno?</h2>
 							<div className="w-full">
 								<label className="block text-sm font-bold mb-2 text-pink-700">Motivo (opzionale):</label>
 								<div className="flex flex-wrap gap-2 mb-2">
@@ -1091,6 +1091,7 @@ const EditUserModal: React.FC<EditUserModalProps> = ({ userName, age, weight, he
     </div>
   );
 };
+
 // --- COMPONENTE TIMER RECUPERO ---
 type RestTimerProps = {
   seconds: number;
@@ -1115,5 +1116,3 @@ const RestTimer: React.FC<RestTimerProps> = ({ seconds, onComplete, setRestTimer
     </div>
   );
 }
-
-// FINE FILE
