@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import StatsDashboard from "./StatsDashboard";
+import Link from "next/link";
 
 // Tipi per custom workout e challenge
 interface CustomExercise {
@@ -455,13 +456,23 @@ useEffect(() => {
 	if (step === 2) {
 		return (
 			<>
-				<button
-					className="fixed top-4 right-4 z-50 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-bold shadow-lg hover:scale-105 transition-all duration-200 text-lg tracking-wide"
-					onClick={() => setShowStats((s) => !s)}
-					aria-label="Mostra statistiche"
-				>
-					{showStats ? "Chiudi Statistiche" : "Statistiche"}
-				</button>
+				<div className="flex justify-center mt-12 mb-8 gap-4">
+  <Link
+    href="/personal-trainer"
+    className="px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-cyan-400 text-white font-bold shadow-lg hover:scale-105 transition-all duration-200 text-lg tracking-wide focus:outline-none focus:ring-4 focus:ring-cyan-300"
+    aria-label="Consulenza Personal Trainer"
+  >
+    Personal Trainer
+  </Link>
+  {/* Bottone Statistiche */}
+  <button
+    onClick={() => setShowStats(true)}
+    className="px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-400 text-white font-bold shadow-lg hover:scale-105 transition-all duration-200 text-lg tracking-wide focus:outline-none focus:ring-4 focus:ring-cyan-300"
+    aria-label="Statistiche"
+  >
+    Statistiche
+  </button>
+</div>
 				{showStats && (
   <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm animate-fadein">
     <div className="relative w-full max-w-2xl h-[90vh] max-h-[600px] bg-white dark:bg-gray-900 rounded-3xl shadow-2xl border-4 border-cyan-300 flex flex-col animate-pop overflow-hidden">
