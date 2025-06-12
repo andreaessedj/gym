@@ -908,6 +908,15 @@ useEffect(() => {
 				<footer className="w-full mt-24 py-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-lime-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-center text-sm font-semibold text-cyan-900 dark:text-cyan-200 shadow-inner animate-fadein">
   © {new Date().getFullYear()} GYM28. Tutti i diritti riservati.
 </footer>
+<div className="flex justify-center mt-12 mb-8">
+  <a
+    href="/personal-trainer"
+    className="px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-cyan-400 text-white font-bold shadow-lg hover:scale-105 transition-all duration-200 text-xl tracking-wide focus:outline-none focus:ring-4 focus:ring-cyan-300 animate-bounce"
+    aria-label="Consulenza Personal Trainer"
+  >
+    Consulenza Personal Trainer
+  </a>
+</div>
 			</>
 		);
 	}
