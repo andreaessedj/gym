@@ -81,7 +81,7 @@ export default function LoginPage() {
           <button
             type="button"
             className="mt-2 px-8 py-2 rounded-full border-2 border-cyan-400 text-cyan-700 dark:text-cyan-200 bg-white dark:bg-gray-900 font-semibold shadow hover:bg-cyan-50 dark:hover:bg-gray-800 transition-all duration-200 text-base"
-            onClick={() => router.push("/")}
+            onClick={() => { window.location.href = "/"; }}
           >
             Prima volta qui?
           </button>
