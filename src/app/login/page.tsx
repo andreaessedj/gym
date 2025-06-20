@@ -78,6 +78,13 @@ export default function LoginPage() {
           >
             {loading ? "Caricamento..." : "Accedi"}
           </button>
+          <button
+            type="button"
+            className="mt-2 px-8 py-2 rounded-full border-2 border-cyan-400 text-cyan-700 dark:text-cyan-200 bg-white dark:bg-gray-900 font-semibold shadow hover:bg-cyan-50 dark:hover:bg-gray-800 transition-all duration-200 text-base"
+            onClick={() => router.push("/")}
+          >
+            Prima volta qui?
+          </button>
         </form>
         {error && <div className="mt-4 text-red-500 text-center font-bold animate-fadein">{error}</div>}
         {userData && (
